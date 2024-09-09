@@ -1,0 +1,10 @@
+@if (editState) {
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="column title" #input>
+  <button mat-button type="button" (click)="submit(input.value)">submit</button>
+  <button mat-button type="button" (click)="changeState()">Cancel</button>
+</mat-form-field>
+}
+@else {
+  <button mat-button type="button" (click)="changeState()">add a button</button>
+}

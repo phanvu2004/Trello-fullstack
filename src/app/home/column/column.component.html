@@ -1,0 +1,18 @@
+<div class="column">
+  <header>
+    <h3>{{column.title}}</h3>
+    <button type="button" mat-icon-button (click)="deleteColumn()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </header>
+  <div class="cards" cdkDropList
+    [id]="column.id"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListData]="column.cardsList"
+    [cdkDropListConnectedTo]="columnIds!">
+    @for (card of column.cardsList; track card) {
+    <app-card [card]="card" cdkDrag></app-card>
+    }
+  </div>
+  <app-add-card (emitTitle)="addCard($event)"></app-add-card>
+</div>

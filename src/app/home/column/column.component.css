@@ -1,0 +1,26 @@
+.column {
+  width: 350px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  min-height: 5px;
+  gap: .5em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  margin-top: 15px;
+}

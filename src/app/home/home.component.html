@@ -1,0 +1,9 @@
+<app-toolbar></app-toolbar>
+
+<div class="columns" cdkDropListOrientation="horizontal"  cdkDropList (cdkDropListDropped)="drop($event)">
+  @for(column of columns; track column) {
+    <app-column class="column" [columns]="columns" [column]="column" cdkDrag></app-column>
+  }
+  <app-add-column (emitTitle)="createColumn($event)"></app-add-column>
+</div>
+

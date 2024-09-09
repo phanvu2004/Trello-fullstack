@@ -1,0 +1,19 @@
+.columns {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.columns.cdk-drop-list-dragging .column:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
